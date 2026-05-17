@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Study Planner</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#667eea,#764ba2);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:900px;
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:25px;
+      color:#333;
+    }
+
+    .top-box{
+      display:flex;
+      gap:10px;
+      margin-bottom:25px;
+    }
+
+    input{
+      flex:1;
+      padding:14px;
+      border:2px solid #ddd;
+      border-radius:10px;
+      font-size:16px;
+    }
+
+    button{
+      padding:14px 20px;
+      border:none;
+      border-radius:10px;
+      background:#667eea;
+      color:white;
+      cursor:pointer;
+    }
+
+    .task{
+      background:#f4f4f4;
+      padding:15px;
+      border-radius:12px;
+      margin-bottom:12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .completed span{
+      text-decoration:line-through;
+      color:gray;
+    }
+
+    .btn-group{
+      display:flex;
+      gap:8px;
+    }
+
+    .complete-btn{
+      background:#28a745;
+    }
+
+    .delete-btn{
+      background:#dc3545;
+    }
+
+    .stats{
+      margin-top:25px;
+      text-align:center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>📚 Secure Study Planner</h1>
+
+  <div class="top-box">
+    <input type="text" id="taskInput" maxlength="100" placeholder="Enter study task...">
+    <button id="addBtn">Add Task</button>
+  </div>
+
+  <div id="taskList"></div>
+
+  <div class="stats">
+    Completed: <span id="completed">0</span> |
+    Total: <span id="total">0</span>
+  </div>
+
+</div>
+
+<script>
+
+let completedTasks = 0;
+let totalTasks = 0;
+
+document.getElementById("addBtn").addEventListener("click", addTask);
+
+function addTask(){
+
+  const taskInput = document.getElementById("taskInput");
+  const taskText = taskInput.value.trim();
+
+  if(taskText === ""){
+    alert("Please enter a task!");
+    return;
+  }
+
+  const taskList = document.getElementById("taskList");
+
+  // Create task container
+  const taskDiv = document.createElement("div");
+  taskDiv.className = "task";
+
+  // Safe text insertion
+  const span = document.createElement("span");
+  span.textContent = taskText;
+
+  // Button group
+  const btnGroup = document.createElement("div");
+  btnGroup.className = "btn-group";
+
+  // Complete button
+  const completeBtn = document.createElement("button");
+  completeBtn.textContent = "Done";
+  completeBtn.className = "complete-btn";
+
+  completeBtn.addEventListener("click", () => {
+    if(!taskDiv.classList.contains("completed")){
+      taskDiv.classList.add("completed");
+      completedTasks++;
+      updateStats();
+    }
+  });
+
+  // Delete button
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.className = "delete-btn";
+
+  deleteBtn.addEventListener("click", () => {
+
+    if(taskDiv.classList.contains("completed")){
+      completedTasks--;
+    }
+
+    totalTasks--;
+    taskDiv.remove();
+    updateStats();
+  });
+
+  btnGroup.appendChild(completeBtn);
+  btnGroup.appendChild(deleteBtn);
+
+  taskDiv.appendChild(span);
+  taskDiv.appendChild(btnGroup);
+
+  taskList.appendChild(taskDiv);
+
+  totalTasks++;
+  updateStats();
+
+  taskInput.value = "";
+}
+
+function updateStats(){
+  document.getElementById("completed").textContent = completedTasks;
+  document.getElementById("total").textContent = totalTasks;
+}
+
+</script>
+
+</body>
+</html>
