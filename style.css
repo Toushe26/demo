@@ -1,67 +1,20 @@
- *{
-    /* universal selector, applies to all elements */
-    font-family: monospace;
-    border: 1px solid red;
-     /* for all elements, it will give a red border to all elements, which is useful for debugging and understanding the box model */
-}
-html{
-    font-size: 16px;
-    /* for the html element, which is the root element of the page; we could use the body element instead of html element, either html element would work oftentimes if you're just starting out amd just remmembering it might be best to just use the body element, eta ekbar use korle bar bar kora lage na */
-}
-
 body{
-   font-size: 22px; 
-   border: 2px solid black;
-   /* for the body element, which is the entire page */
-   /* it will override the font-size set on the html element, because it is more specific than the universal selector,this body element which appears only once per page  */
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: papayawhip;
+    /* we also use the background property to set the background color, but it is a shorthand property and can set multiple background related properties at once. */
+    color:darkblue;
+    /*we can also use rgb or hsl color values*/
+    /* color: rgb(0, 0, 139); */
+    /* color: hsl(240, 100%, 27.5%); */
 }
-
-mai{
-    font-family:monospace;
-    /* for the main element, which is a semantic element that represents the main content of the page */
-}
-button, input. textarea, select{
-    font: inherit;
-    /* for all button, input, textarea, and select elements, it will make them inherit
-}
-
-h1{
-    color: blue;
-    /* for all h1 elements */
-}
-h1, h2{
-    font-family: Arial, sans-serif;
-    /* for all h1 and h2 elements */
-}
-p{
-    color: green;
-    /* for all paragraph elements */
-}
-
-
-}
-.gray{
-    color: gray;
-    /* for all elements with class "gray" */
-    /* class selectory is more specific than element selector, so it will override the color set on the p element for any element with the class "gray" */
-}
-p{
-    color: purple!important;
-    /* for all paragraph elements, it will override the previous color rules for p elements because of the !important declaration, but it is generally not recommended to use !important unless necessary, as it can make debugging and maintenance more difficult */
-}
-p{
-    color: red;
-    /* for all paragraph elements ,it works because it comes after the previous p rule */
-}
-p span{
-    text-transform: uppercase;
-    /* for all span elements that are inside a paragraph */
-    background-color: gold;
-    /* এর পরিবপ্র্তে p span { background-color: gold; } লিখলে সব span এর ব্যাকগ্রাউন্ড গোল্ড হবে, কিন্তু p span { background-color: gold; } লিখলে শুধুমাত্র প্যারাগ্রাফের ভিতরের স্প্যানের ব্যাকগ্রাউন্ড গোল্ড হবে।  */
-    /* পরিবর্তে highlight ক্লাস ব্যবহার করা যেতে পারে, যেমন: .highlight { background-color: gold; } এবং তারপর HTML এ <span class="highlight"> ... </span> ব্যবহার করা যেতে পারে। */
-}
-/* most specific selector yet  is an id selector. But it is not recommended to use it excessively */
-#second{
-    font-style: italic;
-    /* for the element with id "second" */
+p{ 
+    color: rgb(0,0,255);
+    /* color: hsl(240, 100%, 50%); */
+    /* we can also use rgba and hsla color values to set the color with an alpha channel for transparency */
+    /* color: rgba(0, 0, 255, 0.5); */
+    /*color: #0000ff80;*/ /* 80 is the alpha value in hexadecimal (128 in decimal) */"
+    
+    /* color palattes generator "coolors.co" */
 }
