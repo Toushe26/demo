@@ -1,0 +1,20 @@
+body{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: papayawhip;
+    /* we also use the background property to set the background color, but it is a shorthand property and can set multiple background related properties at once. */
+    color:darkblue;
+    /*we can also use rgb or hsl color values*/
+    /* color: rgb(0, 0, 139); */
+    /* color: hsl(240, 100%, 27.5%); */
+}
+p{ 
+    color: rgb(0,0,255);
+    /* color: hsl(240, 100%, 50%); */
+    /* we can also use rgba and hsla color values to set the color with an alpha channel for transparency */
+    /* color: rgba(0, 0, 255, 0.5); */
+    /*color: #0000ff80;*/ /* 80 is the alpha value in hexadecimal (128 in decimal) */"
+    
+    /* color palattes generator "coolors.co" */
+}
