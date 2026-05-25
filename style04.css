@@ -1,0 +1,68 @@
+*{
+    margin: 0
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box; is a CSS property that changes the way the width and height of an element are calculated. By default, the width and height of an element are calculated based on the content, padding, and border. However, when box-sizing: border-box; is applied, the width and height of an element are calculated based on the content only, and the padding and border are included in the total width and height of the element. This means that if you set a width of 100px for an element with box-sizing: border-box;, the total width of the element will be 100px, including any padding and border. This can make it easier to create layouts and control the size of elements without having to worry about adding extra space for padding and borders. */
+}
+
+p{
+    font-size: 32px;
+    /* 32px is the size of the font */
+    /* 32px is the size of the font, which is twice the default font size of 16px */
+}
+html{
+    font-size: 16px;
+    /* 16px is the default font size for most browsers */
+}
+
+header{
+    width: 80%;
+    /* 50% of the width of the parent element, which is the body in this case */
+    /* 50% of the width of the viewport, which is the entire width of the browser window */
+}
+
+body{
+    min-height: 100vh;
+    /* 100vh is equal to 100% of the height of the viewport, which is the entire height of the browser window */
+   /* width: 100%;*/
+    /* 100vw is equal to 100% of the width of the viewport, which is the entire width of the browser window */
+}
+h1{
+    border: 2px solid red;
+    /* 2px is the width of the border */
+    width: 50%;
+    /* 50% of the width of the parent element, which is the header in this case */
+/* 50% of the width of the viewport, which is the entire width of the browser window */
+    font-size: 3rem;
+    /* 1rem is equal to the font size of the root element, which is the html element in this case */
+    /* 1rem is equal to 16px, which is the default font size of the html element */
+    /* 1rem is equal to 16px, which is the default font size of the html element, and it is also equal to 1em in this case because the font size of the h1 element is not specified */
+padding: 0.5em;
+    /* 0.5em is equal to the font size of the parent element, which is the header in this case */
+    /* 0.5em is equal to 16px, which is the font size of the header in this case */
+
+}
+
+main{
+    width: 50vw;
+    /*we can use vw (viewport width) unit to set the width of an element based on the width of the viewport, which is the entire width of the browser window. 1vw is equal to 1% of the width of the viewport, so 50vw is equal to 50% of the width of the viewport. This can be useful for creating responsive designs that adapt to different screen sizes. In this case, setting the width of the main element to 50vw means that it will take up half of the width of the viewport, regardless of the size of the screen. */
+    /* 50vw is equal to 50% of the width of the viewport, which is the entire width of the browser window, and it is also equal to 80% of the width of the header in this case because the width of the header is 80% of the width of the viewport */
+    background-color: skyblue;
+    /* 50vw is equal to 50% of the width of the viewport, which is the entire width of the browser window, and it is also equal to 80% of the width of the header in this case because the width of the header is 80% of the width of the viewport, and it is also equal to 100% of the width of the main element in this case because the main element is a child of the header element */
+    font-size: 2rem
+}
+
+p{
+    font-size: 2rem;
+    /* 1rem is equal to the font size of the root element, which is the html element in this case */
+    /* 1rem is equal to 16px, which is the default font size of the html element */
+    /* 1rem is equal to 16px, which is the default font size of the html element, and it is also equal to 1em in this case because the font size of the p element is not specified */
+    width: 40ch;
+    /* 40ch is equal to the width of 40 characters of the font being used */
+    /* 40ch is equal to the width of 40 characters of the font being used, which is approximately 320px in this case */
+}
+p{
+    font-size: 2em;
+    /* 1em is equal to the font size of the parent element, which is the main element in this case */
+    /* 1em is equal to 32px, which is the font size of the main element in this case */
+}
