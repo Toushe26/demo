@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+/* Typography is the way that text is arranged and presented */
+body {
+    padding: 10%;
+    font-size: 2rem;
+    color: purple;
+    /*font-size: 2rem; sets the font size to 2 times the root element's font size, which is typically 16 pixels by default, resulting in a font size of 32 pixels. */
+    font-family:serif
+    /*font-family: serif; sets the font family to a serif typeface, which typically has small decorative lines or strokes at the ends of characters. */
+     /*font-family: sans-serif; sets the font family to a sans-serif typeface, which typically does not have small decorative lines or strokes at the ends of characters. */
+     /*font-family: monospace; sets the font family to a monospace typeface, where each character occupies the same amount of horizontal space. */
+     /*font-family: cursive; sets the font family to a cursive typeface, which typically has a flowing and handwritten style. */
+     /*font-family: fantasy; sets the font family to a fantasy typeface, which typically has a decorative and imaginative style. */
+     /* font-family: 'Courier New', Courier, monospace; sets the font family to 'Courier New' if available, otherwise falls back to Courier, and if that is not available, it uses any monospace font. */
+     /*font-family: verdana, sans-serif; sets the font family to Verdana if available, otherwise falls back to any sans-serif font. */
+      /*font-family: 'Times New Roman', Times, serif; sets the font family to 'Times New Roman' if available, otherwise falls back to Times, and if that is not available, it uses any serif font. */
+      /*font-family:Verdana, Geneva, Tahoma, sans-serif ; sets the font family to Verdana if available, otherwise falls back to Geneva, then Tahoma, and if none of those are available, it uses any sans-serif font. */
+}
+
+input,button {
+    font: inherit;
+}
+
+p {
+    text-decoration: underline;
+    /*text-decoration: underline; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: overline; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: line-through; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: none; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: underline overline; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: underline overline line-through; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: underline overline line-through red; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+    /*text-decoration: underline overline line-through red wavy; is a shorthand property that sets the text-decoration-line, text-decoration-color, and text-decoration-style properties in a single declaration. */
+}
+p{
+    text-transform:capitalize;
+    /*text-transform: capitalize; transforms the first character of each word to uppercase and the rest to lowercase. */
+    /* text-transform: lowercase; transforms all characters to lowercase. */
+    /* text-transform: uppercase; transforms all characters to uppercase. */
+}
+p{
+    text-align: justify;
+    /*text-align: justify; aligns the text to both the left and right margins, adding extra space between words as necessary. */
+    /*text-align: left; aligns the text to the left margin. */
+    /*text-align: right; aligns the text to the right margin. */
+    /*text-align: center; centers the text horizontally within its container. */
+}
+p{
+    text-indent: 2em;
+    /*text-indent: 2em; indents the first line of a paragraph by 2em (where 1em is equal to the current font size). */
+}
+p {
+    line-height: 1.5;
+    /*line-height: 1.5; sets the line height to 1.5 times the font size, which can improve readability by providing more space between lines of text. */
+    letter-spacing: 0.25em;
+    /*letter-spacing: 0.25em; increases the space between characters by 0.25em, which can enhance readability and create a more open and airy feel to the text. */
+        word-spacing: 0.5em;
+    /*word-spacing: 0.5em; increases the space between words by 0.5em, which can improve readability and create a more open and airy feel to the text. */
+    font-weight: 300;
+    /*font-weight: 300; sets the font weight to a lighter value, making the text appear thinner and less prominent. */
+    /*font-weight: bold; sets the font weight to bold, making the text appear thicker and more prominent. */
+    /*font-weight: normal; sets the font weight to normal, which is the default weight for most fonts. */
+    /*font-weight: 100; sets the font weight to a very light value, making the text appear extremely thin and delicate. */
+    /*font-weight: bolder; sets the font weight to a value that is bolder than bold, making the text appear even thicker and more prominent. */
+    font-style: italic;
+    /*font-style: italic; sets the font style to italic, which slants the text to the right and can be used for emphasis or to indicate a different tone. */
+    /*font-style: normal; sets the font style to normal, which is the default style for most fonts. */
+    /* font-style: oblique; sets the font style to oblique, which slants the text to the right but is less pronounced than italic. */
+}
