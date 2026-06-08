@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* Styling links is important for user experience and accessibility */
+
+body{
+    padding: 10%;
+    font-size: 2rem;
+    font-family: Roboto, sans-serif;
+}
+
+main{
+    opacity: 0.4;
+        /* opacity is a property that controls the transparency of an element. We can use it to make links that are not clickable appear faded */
+}
+
+a{
+    text-decoration: none;
+    /* text-decoration is the property that controls the underline of links */
+    cursor: not-allowed;
+    /* cursor is the property that controls the mouse cursor when hovering over an element */
+    /*cursor: pointer; is the default cursor for links, but we can change it to not-allowed to indicate that the link is not clickable */
+    /* We can also change the color of the link to indicate that it is not clickable */
+    color: blue;
+    /* We can also add a hover effect to indicate that the link is clickable */
+    /*color: #000; is the default color for links, but we can change it to blue to indicate that it is clickable */
+    /*color: steelblue; is a lighter shade of blue that can be used for links that are not the main focus of the page */
+    /*color: hsl(240, 100%, 50%); is another way to specify the color of links using the HSL color model */
+    
+    /* opacity: 0.5; is a property that controls the transparency of an element. We can use it to make links that are not clickable appear faded */
+}
+
+a:visited{
+    color: purple;
+    /* a:visited is the pseudo-class that targets links that have been visited by the user */
+}
+/* The order of the link pseudo-classes is important. The recommended order is: a:link, a:visited, a:hover, a:active. This is because the more specific pseudo-classes (like :hover and :active) should come after the less specific ones (like :link and :visited) to ensure that they are applied correctly. If the order is incorrect, some styles may not be applied as expected. For example, if a:hover is placed before a:visited, the hover effect will not work on visited links because the visited state takes precedence over the hover state. */
+/*a:hover, a:focus{
+color: dodgerblue;
+ a:focus is the pseudo-class that targets links when they are focused (e.g. when the user tabs to them) 
+*/
+/* :hover, a:focus{
+    color: hsl(189,44%, 49%, 0.8);
+    /* We can also use RGBA color values to specify the color of links with transparency */
+    /*background: gold; is a property that sets the background color of an element. We can use it to create a highlight effect on links when they are hovered or focused */
+a:hover {
+         color: dodgerblue;
+         /* a:hover is the pseudo-class that targets links when the user hovers over them */
+}
+/*if a:hover is above a:visited, the hover effect will not work on visited links because the visited state takes precedence over the hover state. To fix this, we can move the a:hover rule below the a:visited rule in the CSS file.*/
+a:active{
+    color: red;
+    /* a:active is the pseudo-class that targets links when the user clicks on them */
+}
